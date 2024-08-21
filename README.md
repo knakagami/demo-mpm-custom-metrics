@@ -1,5 +1,6 @@
 # demo-mpm-custom-metrics
 send custom metrics based on the list of metric names and dimension names with each random (from 0 to 32767) number.
+you can see set how metrics would route after setting metric pipeline management in Splunk Observability Cloud about the metrics you send by this scripts.
 
 # Usage
 1. set the realm and ingest access token in the `env` file
