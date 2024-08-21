@@ -1,13 +1,12 @@
 #!/bin/bash
 
-REALM=jp0                           # Splunk-JP-Sandbox
-API_TOKEN="ovT21OrEwFBLZqel3m4w1w"    # o11y-demo-jp0-api
-
-DIR=/home/splunker/demo-mpm/
+cd `dirname $0`
+DIR=$(pwd)
 METRIC_LIST=${DIR}/metric_name.lst
 DIMENSION_LIST=${DIR}/dimension_name.lst
-
 TEMP_JSON=$(mktemp /tmp/custom_metrics_$(date +%Y%m%d-%H%M%S)_XXX)
+
+. ${DIR}/env
 
 # Set 
 cat ${METRIC_LIST} |\
