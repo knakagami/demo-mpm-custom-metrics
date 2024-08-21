@@ -13,13 +13,9 @@ cat ${METRIC_LIST} |\
 while read metric_list; do
     cat ${DIMENSION_LIST} |\
     while read dimension_list; do
-#        echo "'{\"gauge\": [{\"metric\": \"${metric_list}\", \"value\": ${RANDOM}, \"dimensions\": \"{${dimension_list}}\"}]}'," | tee -a ${TEMP_JSON}
         echo "{\"metric\": \"${metric_list}\", \"value\": ${RANDOM}, \"dimensions\": {${dimension_list}}}" | tee -a ${TEMP_JSON}
     done
 done
-
-# adjust json
-#sed -i '$s/,$//' ${TEMP_JSON}
 
 # Send metrics
 
