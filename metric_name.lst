@@ -1,0 +1,3 @@
+demo-mpm.connection.count
+demo-mpm.connection.latency
+demo-mpm.connection.errors
